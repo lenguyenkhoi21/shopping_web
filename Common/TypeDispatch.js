@@ -1,0 +1,8 @@
+export const typeLogin = 'LOGIN'
+export const typeLogout = 'LOGOUT'
+export const typeAddToCart = 'ADD_TO_CART'
+export const typeRemoveFromCart = 'REMOVE_FROM_CART'
+export const typeDecrement = 'DECREMENT'
+export const typeIncrement = 'INCREMENT'
+export const typePayment = 'PAYMENT'
+export const typeClear = 'CLEAR'

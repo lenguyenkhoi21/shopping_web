@@ -7,14 +7,14 @@ export const DetailProduct = (props) => {
     const [count, setCount] = useState(0)
 
     const addToCart = (event, product) => {
-        console.log('Click')
-        const add = {
-            product_id : product.product_id,
-            name : product.name,
-            price : product.price,
-        }
+        event.preventDefault()
+        // const add = {
+        //     product_id : product.product_id,
+        //     name : product.name,
+        //     price : product.price,
+        // }
 
-        context.addToCartExport(add)
+        context.addToCartExport(product)
     }
 
     return (

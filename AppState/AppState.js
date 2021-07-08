@@ -60,7 +60,7 @@ export const AppState = (props) => {
     const add = (product, state) => {
         const array = state.cart
         const exist = array.find(item => {
-            return product.id === item.id
+            return product.product_id === item.product_id
         })
 
         if (exist === undefined) {
@@ -75,7 +75,7 @@ export const AppState = (props) => {
         } else {
             let total = 0
             array.forEach(item => {
-                if (item.id === exist.id) {
+                if (item.product_id === exist.product_id) {
                     item.count++
                 }
                 total += item.count * item.price

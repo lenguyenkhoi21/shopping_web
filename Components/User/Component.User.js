@@ -7,7 +7,7 @@ export const UserDetail = () => {
     const router = useRouter()
 
     const logout = (event) => {
-        context.logout()
+        context.logoutExport()
         router.push('/')
     }
 

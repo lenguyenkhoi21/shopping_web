@@ -5,7 +5,7 @@ import {
     typeDecrement,
     typeIncrement,
     typeLogin,
-    typeLogout,
+    typeLogout, typePayment,
     typeRemoveFromCart
 } from '../Common/TypeDispatch'
 
@@ -13,6 +13,11 @@ import {
 export const GlobalContext = createContext()
 
 export const AppState = (props) => {
+
+    const payment = (navigate, state) => {
+        navigate()
+        return {...state, cart : [], total : 0, totalItem: 0}
+    }
 
     const increment = (product, state) => {
         const array = state.cart
@@ -108,6 +113,8 @@ export const AppState = (props) => {
     const Reducer = useCallback(
         (state, action) => {
             switch (action.type) {
+                case `${typePayment}`:
+                    return payment(action.navigate, state)
 
                 case `${typeIncrement}`:
                     return increment(action.product, state)
@@ -168,13 +175,18 @@ export const AppState = (props) => {
         dispatch({type : `${typeLogout}`})
     }
 
+    const paymentExport = (navigate) => {
+        dispatch({type : `${typePayment}`, navigate : navigate})
+    }
+
     const state = {
         store,
         loginExport,
         logoutExport,
         addToCartExport,
         removeFromCartExport,
-        clearExport
+        clearExport,
+        paymentExport
     }
 
     return (

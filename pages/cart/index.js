@@ -9,9 +9,9 @@ import {CartList} from '../../Components/Cart/Component.Cart'
 export default function Cart() {
     const context = useContext(GlobalContext)
 
-    let view = null
+    let view
 
-    if (context.store.user.phone===null) {
+    if (context.store.user.phone === null) {
         view = <Authentication />
     } else {
         view =  <CartList cart = {context.store.cart} />

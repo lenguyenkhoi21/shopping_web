@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import {GlobalContext} from '../../AppState/AppState'
 import {useRouter} from 'next/router'
+import Link from 'next/link'
 
 export const UserDetail = () => {
     const context = useContext(GlobalContext)
@@ -13,7 +14,15 @@ export const UserDetail = () => {
 
     return (
         <div className={`container empty`}>
-            <button onClick={logout}>  Đăng xuất </button>
+            <div>
+                <Link href={'/user/history'}>
+                    <a> Lịch sử </a>
+                </Link>
+            </div>
+
+            <div>
+                <button onClick={logout}>  Đăng xuất </button>
+            </div>
         </div>
     )
 }

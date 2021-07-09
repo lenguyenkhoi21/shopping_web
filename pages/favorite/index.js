@@ -16,7 +16,6 @@ export default function Favorite() {
     useEffect(() => {
 
         if (context.store.user.phone !== null ) {
-            console.log('Here')
             axios.get(`${API_DIR}/api/favorite/${context.store.user.phone}`, {
                 headers: {
                     Authorization : `Bearer ${context.store.user.token}`

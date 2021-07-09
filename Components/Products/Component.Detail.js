@@ -4,7 +4,6 @@ import {GlobalContext} from '../../AppState/AppState'
 
 export const DetailProduct = (props) => {
     const context = useContext(GlobalContext)
-    const [count, setCount] = useState(0)
 
     const addToCart = (event, product) => {
         event.preventDefault()
@@ -26,7 +25,6 @@ export const DetailProduct = (props) => {
             <div>
                 <button onClick={event => {addToCart(event, props.product)}}> Thêm vào giỏ hàng </button>
             </div>
-            <p> Tổng: {count} </p>
         </div>
     )
 }

@@ -14,7 +14,11 @@ export default function Cart() {
     if (context.store.user.phone === null) {
         view = <Authentication />
     } else {
-        view =  <CartList cart = {context.store.cart} />
+        if (context.store.total === 0) {
+            view = <div className={`container blank`} />
+        } else {
+            view =  <CartList cart = {context.store.cart} />
+        }
     }
 
     return (

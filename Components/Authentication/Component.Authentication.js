@@ -47,27 +47,48 @@ export const Authentication = () => {
     }
     return (
         <div className={`container empty`}>
-            <div className={`col g-3 align-items-center`}>
-                <div className={`${styles.inputTxt}`}>
-                    <div className={`col-auto`}>
-                        <label className={`col-form-label`} > Số điện thoại </label>
-                    </div>
-                    <div className={`col-auto  ${styles.inputSize}`}>
-                        <input type='text' className={`form-control`} onChange={onChanged} name='phone' />
-                    </div>
-                    <br/>
-                    <div className={`col-auto`}>
-                        <label className={`col-form-label`} > Mật Khẩu </label>
-                    </div>
-                    <div className={`col-auto ${styles.inputSize}`}>
-                        <input type='password' className={`form-control`} onChange={onChanged} name='password' />
-                    </div>
-                </div>
+            <div className={`row ${styles.around}`}>
+                <div className={`col-sm-4`} />
+                <div className={`col-sm-4 g-4 align-items-center`}>
+                    <div>
+                        <div className={`${styles.inputTxt}`}>
+                            <div className={`col-auto`}>
+                                <label className={`col-form-label`} > Số điện thoại </label>
+                            </div>
+                            <div className={`col-auto  ${styles.inputSize}`}>
+                                <input type='text' className={`form-control`} onChange={onChanged} name='phone' />
+                            </div>
+                            <br/>
+                            <div className={`col-auto`}>
+                                <label className={`col-form-label`} > Mật Khẩu </label>
+                            </div>
+                            <div className={`col-auto ${styles.inputSize}`}>
+                                <input type='password' className={`form-control`} onChange={onChanged} name='password' />
+                            </div>
+                        </div>
 
-                <div className={`col-auto`}>
-                    <button type='submit' className={`btn btn-primary mb-3`}  onClick={handleSubmit}>Đăng Nhập</button>
+                        <div className={`col-auto ${styles.btnContainer}`}>
+                            <button
+                                type='submit'
+                                className={`btn btn-primary mb-3 ${styles.btnLogin}`}
+                                onClick={handleSubmit}>
+                                Đăng Nhập
+                            </button>
+
+                            <button
+                                type='submit'
+                                className={`btn btn-primary mb-3 ${styles.btnLogout}`}
+                                onClick={handleSubmit}>
+                                Đăng Ký
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
+                <div className={`col-sm-4`} />
             </div>
+
+
         </div>
     )
 }

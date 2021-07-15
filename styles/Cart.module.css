@@ -1,0 +1,59 @@
+.divMargin {
+    margin-top: 6rem;
+}
+
+.btnMargin {
+    margin-right: 10px;
+}
+
+.btnDelete {
+    background-color: Transparent;
+    border: none;
+}
+
+.iconDelete {
+    height: 20px;
+    width: 20px;
+}
+
+.txtAlign {
+    text-align: center;
+}
+
+.txtSize {
+    font-size: 18px;
+}
+
+.txtBold {
+    font-weight: bold;
+}
+
+.tableBorder {
+    border: 1px black solid;
+}
+
+.footerBorder {
+    border-bottom-style:hidden;
+}
+
+.divTable {
+    margin-top: 2rem;
+}
+
+.btnAdd {
+    height: 15px;
+    width: 15px;
+}
+
+.groupCont {
+    display: flex;
+    justify-content: center;
+}
+
+.priceTxt {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+

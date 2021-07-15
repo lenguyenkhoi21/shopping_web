@@ -1,0 +1,51 @@
+.around {
+    margin-top: 6.5rem;
+}
+
+.itemContainer {
+    display: flex;
+}
+
+.image {
+    flex-grow: 1;
+    padding-top: 1rem;
+}
+
+.imageBorder {
+    border-radius: 7px;
+}
+
+.content {
+    flex-grow: 1;
+    width: 200px;
+}
+
+.productName {
+    font-weight: bold;
+    font-family: Segoe UI, serif;
+    font-size: 27px;
+    color: black;
+}
+
+.productSubtitle {
+    font-weight: bold;
+    font-family: Segoe UI, serif;
+    font-size: 20px;
+    color: black;
+}
+
+.productPrice {
+    font-weight: bold;
+    font-family: Segoe UI, serif;
+    font-size: 27px;
+    color: crimson;
+}
+
+.productCurrency {
+    text-decoration: underline;
+}
+
+.productDescription {
+    font-size: 20px;
+}
+

@@ -62,7 +62,8 @@ export const AppState = (props) => {
         return {...state, cart : array, total : total, totalItem : totalItem}
     }
 
-    const add = (product, state) => {
+    const add = (product, navigate, state) => {
+        navigate()
         const array = state.cart
         const exist = array.find(item => {
             return product.product_id === item.product_id
@@ -129,7 +130,7 @@ export const AppState = (props) => {
                     return remove(action.product, state)
 
                 case `${typeAddToCart}`:
-                    return add(action.product, state)
+                    return add(action.product, action.navigate ,state)
 
                 case `${typeLogin}`:
                     return login(action.account, state)
@@ -163,8 +164,8 @@ export const AppState = (props) => {
         dispatch({ type : `${typeRemoveFromCart}`, product : product })
     }
 
-    const addToCartExport = (product) => {
-        dispatch({ type : `${typeAddToCart}`, product : product })
+    const addToCartExport = (product, navigate) => {
+        dispatch({ type : `${typeAddToCart}`, product : product, navigate : navigate })
     }
 
     const loginExport = (account) => {
@@ -179,6 +180,14 @@ export const AppState = (props) => {
         dispatch({type : `${typePayment}`, navigate : navigate})
     }
 
+    const incrementExport = (product) => {
+        dispatch({type : `${typeIncrement}`, product : product })
+    }
+
+    const decrementExport = (product) => {
+        dispatch({type : `${typeDecrement}`, product : product})
+    }
+
     const state = {
         store,
         loginExport,
@@ -186,7 +195,9 @@ export const AppState = (props) => {
         addToCartExport,
         removeFromCartExport,
         clearExport,
-        paymentExport
+        paymentExport,
+        incrementExport,
+        decrementExport
     }
 
     return (

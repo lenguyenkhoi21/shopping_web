@@ -1,7 +1,25 @@
 .inputSize {
-    width: 200px;
+    width: auto;
 }
 
 .inputTxt {
     margin-bottom: 1rem;
+}
+
+.around {
+    margin-top: 10rem;
+}
+
+.btnContainer {
+    position: relative;
+}
+
+.btnLogin {
+    position: absolute;
+    left: 0;
+}
+
+.btnLogout {
+    position: absolute;
+    right: 0;
 }

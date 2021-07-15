@@ -15,11 +15,21 @@
 }
 
 .btnLogin {
-    position: absolute;
-    left: 0;
+    float: left;
 }
 
 .btnLogout {
-    position: absolute;
-    right: 0;
+    float: right;
+}
+
+.txtCenter {
+    text-align: center;
+}
+
+.errorText {
+    color: red;
+}
+
+.clearFix {
+    clear: both;
 }

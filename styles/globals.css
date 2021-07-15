@@ -16,13 +16,11 @@ a {
 }
 
 .blank {
-    background-color: #eaeaea;
     width: auto;
-    height: auto;
+    min-height: calc(100vh - 30px);
 }
 
 .empty {
-    background-color: #eaeaea;
     width: auto;
     height: 800px;
 }

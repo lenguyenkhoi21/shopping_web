@@ -36,7 +36,7 @@ export const Authentication = () => {
                         token : value.data.token
                     }
                     context.loginExport(user)
-                    if (router.route==='/login') {
+                    if (router.route === '/login') {
                         router.push('/')
                     }
                 }

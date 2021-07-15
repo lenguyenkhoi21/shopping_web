@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import styles from '../../styles/Footer.module.css'
 
 export const Footer = () => {
     return (
-        <footer className={`container`}>
+        <footer className={`container ${styles.footerStyle}`}>
             <div>
                 Copyright 2021 ® All Rights Reserved By Le Nguyen Khoi.
             </div>

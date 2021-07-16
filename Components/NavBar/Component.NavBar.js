@@ -50,17 +50,17 @@ export const NavBar = (props) => {
                     <ul className={`navbar-nav me-auto mb-2 mb-lg-0`}>
                         <li className={`nav-item`}>
                             <Link href='/'>
-                                <a className={`nav-link active`}> Trang chủ </a>
+                                <a className={`nav-link active ${styles.navHeader}`}> Trang chủ </a>
                             </Link>
                         </li>
                         <li className={`nav-item`}>
                             <Link href='/product'>
-                                <a className={`nav-link active`}> Sản phẩm </a>
+                                <a className={`nav-link active ${styles.navHeader}`}> Sản phẩm </a>
                             </Link>
                         </li>
                         <li className={`nav-item`}>
                             <Link href='/about'>
-                                <a className={`nav-link active`}> Liên hệ </a>
+                                <a className={`nav-link active ${styles.navHeader}`}> Liên hệ </a>
                             </Link>
                         </li>
                     </ul>

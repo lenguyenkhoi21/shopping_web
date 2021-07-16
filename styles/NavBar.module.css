@@ -35,6 +35,11 @@
     background: transparent;
 }
 
+.navHeader {
+    font-family: "JetBrains Mono Medium", serif;
+    font-weight: bold;
+    font-size: 18px;
+}
 
 
 

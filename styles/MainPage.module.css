@@ -1,0 +1,22 @@
+.firstContent {
+    background-image : url('/girl.png');
+    background-size: 787px 437px;
+    background-repeat : no-repeat;
+    height: 437px;
+    width: 787px;
+    float: right;
+}
+
+.welcomeContainer {
+    float: left;
+}
+
+.marginMainpage {
+    margin-top: 3rem;
+}
+
+.welcome {
+    font-family: Courier, serif;
+    font-size: 80px;
+    font-weight: bold;
+}

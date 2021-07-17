@@ -1,6 +1,6 @@
-import React, {useCallback, useEffect, useState} from 'react'
-import Image from 'next/image'
+import React from 'react'
 import styles from '../../styles/MainPage.module.css'
+import TextLoop from 'react-text-loop'
 
 const Welcome1 = () => {
     return (
@@ -32,46 +32,72 @@ const Welcome3 = () => {
     )
 }
 
+const Welcome4 = () => {
+    return (
+        <div className={`${styles.welcomeContainer}`}>
+            <p className={`${styles.welcome}`}> 	&nbsp;  </p>
+            <p className={`${styles.welcome}`}> Shop Now ! </p>
+            <p className={`${styles.welcome}`}> 	&nbsp; </p>
+        </div>
+    )
+}
 
+const SecondContent = () => {
+    return (
+        <div className={`${styles.secondContent}`}>
+            <p className={`${styles.firstContentTxt}`}> Được Chọn Lọc </p>
+            <div className={`${styles.clearFix}`} />
+            <p className={`${styles.firstContentTxt}`}> Từ Những </p>
+            <div className={`${styles.clearFix}`} />
+            <p className={`${styles.firstContentTxt}`}> Nguyên Liệu </p>
+            <div className={`${styles.clearFix}`} />
+            <p className={`${styles.firstContentTxt}`}> Tốt Nhất ! </p>
+            <div className={`${styles.clearFix}`} />
+        </div>
+    )
+}
 
+const ThirdContent = () => {
+    return (
+        <div className={`${styles.thirdContentTxt}`}>
+            <p className={`${styles.thirdContentTxt}`}> Dịch Vụ Giao Hàng </p>
+            <div className={`${styles.clearFix}`} />
+            <p className={`${styles.thirdContentTxt}`}> Nhanh </p>
+            <div className={`${styles.clearFix}`} />
+            <p className={`${styles.thirdContentTxt}`}> Tiện Lợi </p>
+            <div className={`${styles.clearFix}`} />
+        </div>
+    )
+}
 
 export const HomePage = () => {
-    const [welcome, setWelcome] = useState({
-        type : 1,
-        view : <Welcome1 />
-    })
-
-    useEffect(() => {
-        return () => {
-            setInterval(()=> {
-
-                const type = welcome.type
-                console.log(`here ${type}`)
-                switch (type) {
-                    case 1:
-                        setWelcome({type : 2, view : <Welcome2 />})
-                        break
-
-                    case 2:
-                        setWelcome({type : 3, view : <Welcome3 />})
-                        break
-
-                    case 3:
-                        setWelcome({type : 1, view : <Welcome1 />})
-                        break
-                }
-            }, 1000)
-        }
-    }, [welcome.type])
-
 
     return (
-        <div className={`container blank`}>
+        <div className={`container blank ${styles.thirdBottom}`}>
             <div className={`${styles.marginMainpage}`}>
                 <div>
-                    {welcome.view}
+                    <TextLoop springConfig={{ stiffness: 180, damping: 8 }} interval={5000}>
+                        <Welcome1 />
+                        <Welcome2 />
+                        <Welcome3 />
+                        <Welcome4 />
+                    </TextLoop>
                     <div className={`${styles.firstContent}`} />
+
                 </div>
+                <div className={`${styles.clearFix}`} />
+
+                <div className={`${styles.marginSecond}`}>
+                    <SecondContent />
+                    <div className={`${styles.poster1}`} />
+                </div>
+                <div className={`${styles.clearFix}`} />
+
+                <div className={`${styles.thirdContentMargin}`}>
+                    <ThirdContent />
+                    <div className={`${styles.thirdContentImg}`} />
+                </div>
+                <div className={`${styles.clearFix}`} />
             </div>
         </div>
     )

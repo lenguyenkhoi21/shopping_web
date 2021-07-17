@@ -20,3 +20,59 @@
     font-size: 80px;
     font-weight: bold;
 }
+
+.clearFix {
+    clear: both;
+}
+
+.poster1 {
+    background-image : url("/poster_1.jpg");
+    background-size: 833px 556px;
+    background-repeat : no-repeat;
+    height: 417px;
+    width: 625px;
+    float: left;
+}
+
+.secondContent {
+    float: right;
+}
+
+.marginSecond {
+    margin-top: 7rem;
+}
+
+.firstContentTxt {
+    font-family: Courier, serif;
+    font-size: 50px;
+    font-weight: bold;
+    float: right;
+}
+
+.thirdContentTxt {
+    float: left;
+}
+
+.thirdContentImg {
+    background-image : url("/ship.jpg");
+    background-size: 625px 350px;
+    background-repeat : no-repeat;
+    height: 350px;
+    width: 625px;
+    float: right;
+}
+
+.thirdContentMargin {
+    margin-top: 7rem;
+}
+
+.thirdBottom {
+    margin-bottom: 7rem;
+}
+
+.thirdContentTxt {
+    font-family: Courier, serif;
+    font-size: 50px;
+    font-weight: bold;
+    float: left;
+}
